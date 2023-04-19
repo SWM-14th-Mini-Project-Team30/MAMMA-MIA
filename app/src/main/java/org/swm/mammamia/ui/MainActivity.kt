@@ -1,7 +1,8 @@
-package org.swm.mammamia
+package org.swm.mammamia.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import org.swm.mammamia.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

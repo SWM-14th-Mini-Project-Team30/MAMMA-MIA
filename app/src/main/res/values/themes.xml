@@ -15,5 +15,6 @@
         <!-- Customize your theme here. -->
         <item name="android:forceDarkAllowed">false</item>
         <item name="android:includeFontPadding">false</item>
+        <item name="fontFamily">@font/pretendard</item>
     </style>
 </resources>

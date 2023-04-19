@@ -16,4 +16,5 @@
     <color name="gray_4">#424247</color>
     <color name="gray_5">#212225</color>
     <color name="gray_6">#212124</color>
+    <color name="black_header">#212124</color>
 </resources>

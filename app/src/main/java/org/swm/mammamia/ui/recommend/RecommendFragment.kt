@@ -1,20 +1,38 @@
 package org.swm.mammamia.ui.recommend
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import com.google.android.material.tabs.TabLayoutMediator
 import org.swm.mammamia.R
+import org.swm.mammamia.databinding.FragmentRecommendBinding
+import org.swm.mammamia.ui.base.BaseFragment
 
 
-class RecommendFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recommend, container, false)
+class RecommendFragment : BaseFragment<FragmentRecommendBinding>(R.layout.fragment_recommend) {
+    private lateinit var gitTabHostVPAdapter: RecommendAdapter
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.lifecycleOwner = this
+        initAdapter()
+        setViewPagerFragment()
+        initTabLayout()
     }
 
+    private fun initAdapter() {
+        binding.vpHome.adapter =
+            RecommendAdapter(this).also { gitTabHostVPAdapter = it }
+    }
+
+    private fun setViewPagerFragment() {
+        gitTabHostVPAdapter.fragmentList = listOf(DataBaseFragment(), LocationBaseFragment())
+    }
+
+    private fun initTabLayout() {
+        val tabLabel = listOf(
+            getString(R.string.data_base_recommendation),
+            getString(R.string.location_base_recommendation)
+        )
+        TabLayoutMediator(binding.tlHome, binding.vpHome) { tab, position ->
+            tab.text = tabLabel[position]
+        }.attach()
+    }
 }

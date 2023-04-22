@@ -80,11 +80,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"/>
 
-            <LinearLayout
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:scrollbars="none">
 
                 <RadioGroup
                     android:id="@+id/rg_category"
@@ -129,7 +129,7 @@
 
                 </RadioGroup>
 
-            </LinearLayout>
+            </HorizontalScrollView>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

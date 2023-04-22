@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name = "style_rb_category">
+        <item name = "android:minHeight">0dp</item>
+        <item name = "android:button">@null</item>
+        <item name = "android:fontFamily">@font/pretendard</item>
+        <item name = "android:textColor">@drawable/selector_rb_text_color</item>
+        <item name = "android:textSize">15sp</item>
+        <item name = "android:background">@drawable/selector_rb_bg</item>
+        <item name = "android:gravity">center</item>
+        <item name = "android:paddingVertical">10dp</item>
+        <item name = "android:paddingRight">15dp</item>
+        <item name = "android:paddingLeft">15dp</item>
+        <item name = "android:layout_margin">10dp</item>
+    </style>
+
+    <style name = "style_tv_subtitle">
+        <item name = "android:fontFamily">@font/pretendard</item>
+        <item name = "android:textColor">@color/gray_3</item>
+        <item name = "android:textSize">15sp</item>
+        <item name = "android:paddingVertical">5dp</item>
+    </style>
+</resources>

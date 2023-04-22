@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/iv_writing"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="3dp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:fontFamily="@font/pretendard"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintLeft_toRightOf="@id/iv_writing"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="category"
+        style="@style/style_tv_subtitle"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⸱"
+        style="@style/style_tv_subtitle"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_category"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_sake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sake"
+        style="@style/style_tv_subtitle"
+        app:layout_constraintLeft_toRightOf="@id/divider"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_num_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NN"
+        android:fontFamily="@font/pretendard"
+        android:textColor="@color/gray_3"
+        android:textSize="15sp"
+        android:padding="5dp"
+        app:drawableStartCompat="@drawable/ic_comments"
+        android:drawablePadding="3dp"
+        app:layout_constraintRight_toLeftOf="@id/tv_num_likes"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_num_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NN"
+        android:fontFamily="@font/pretendard"
+        android:textColor="@color/gray_3"
+        android:textSize="15sp"
+        android:padding="5dp"
+        app:drawableStartCompat="@drawable/ic_likes"
+        android:drawablePadding="3dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

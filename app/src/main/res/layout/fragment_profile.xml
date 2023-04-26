@@ -1,13 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.profile.ProfileFragment">
+    tools:context=".ui.home.HomeFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/profile" />
+        android:orientation="vertical"
+        android:background="@color/white">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="17dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/pretendard"
+                android:text="@string/profile"
+                android:textColor="@color/black_header"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_noti"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_noti"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="18dp"
+                android:src="@drawable/ic_noti"
+                app:layout_constraintBottom_toBottomOf="@id/iv_search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_search" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <android.widget.Button
+                android:id="@+id/user_info_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="김소마님 / 김소마베이비님\n30대 초반 / 생후 6개월 남아"
+                android:textSize="18dp"
+                android:fontFamily="@font/pretendard"
+                android:drawableLeft="@drawable/ic_profile"
+                android:drawableRight="@drawable/ic_user_info2"
+                android:background="#FFFFFF"
+                android:textColor="#000000"
+                android:padding="16dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+
+
+                <android.widget.Button
+                    android:id="@+id/user_button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="3dp"
+                    android:text="내가 쓴 글"
+                    android:gravity="left|center_vertical"
+                    android:drawablePadding="25dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/pretendard"
+                    android:drawableLeft="@drawable/ic_user_info"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:padding="16dp"/>
+
+                <android.widget.Button
+                    android:id="@+id/user_button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="3dp"
+                    android:text="가입 모임 관리"
+                    android:gravity="left|center_vertical"
+                    android:drawablePadding="25dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/pretendard"
+                    android:drawableLeft="@drawable/ic_user_info"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:padding="16dp"/>
+
+                <android.widget.Button
+                    android:id="@+id/user_button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="3dp"
+                    android:text="관심 목록"
+                    android:gravity="left|center_vertical"
+                    android:drawablePadding="25dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/pretendard"
+                    android:drawableLeft="@drawable/ic_user_info"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:padding="16dp"/>
+                <android.widget.Button
+                    android:id="@+id/user_button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="3dp"
+                    android:text="육아 일기 확인"
+                    android:gravity="left|center_vertical"
+                    android:drawablePadding="25dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/pretendard"
+                    android:drawableLeft="@drawable/ic_user_info"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:padding="16dp"/>
+                <android.widget.Button
+                    android:id="@+id/user_button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="3dp"
+                    android:text="동네 생활 스크랩"
+                    android:textSize="18dp"
+                    android:gravity="left|center_vertical"
+                    android:drawablePadding="25dp"
+                    android:fontFamily="@font/pretendard"
+                    android:drawableLeft="@drawable/ic_user_info"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:padding="16dp"/>
+                <android.widget.Button
+                    android:id="@+id/user_button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="3dp"
+                    android:text="동네 설정 및 인증"
+                    android:gravity="left|center_vertical"
+                    android:drawablePadding="25dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/pretendard"
+                    android:drawableLeft="@drawable/ic_user_info"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:padding="16dp"/>
+                <android.widget.Button
+                    android:id="@+id/user_button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="3dp"
+                    android:text="알림 키워드 설정"
+                    android:gravity="left|center_vertical"
+                    android:drawablePadding="25dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/pretendard"
+                    android:drawableLeft="@drawable/ic_user_info"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:padding="16dp"/>
+                <android.widget.Button
+                    android:id="@+id/user_button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="7dp"
+                    android:text="시스템 환경 설정"
+                    android:gravity="left|center_vertical"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/pretendard"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/ic_user_settings"
+                    android:drawableRight="@drawable/ic_user_info2"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:padding="16dp"/>
+                <android.widget.Button
+                    android:id="@+id/user_button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="회원 탈퇴"
+                    android:gravity="left|center_vertical"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/pretendard"
+                    android:drawableRight="@drawable/ic_user_info2"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:padding="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

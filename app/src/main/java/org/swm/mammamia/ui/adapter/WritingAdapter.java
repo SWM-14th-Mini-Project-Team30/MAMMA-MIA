@@ -12,6 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.swm.mammamia.R;
 import org.swm.mammamia.ui.home.WritingItem;
+import org.swm.mammamia.ui.detailActivity;
+
+import android.content.Intent;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -56,6 +60,15 @@ public class WritingAdapter extends RecyclerView.Adapter<WritingAdapter.ViewHold
         holder.titleTv.setText(items.get(position).getTitle());
         holder.categoryTv.setText(items.get(position).getCategory());
         holder.sakeTv.setText(items.get(position).getSake());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), detailActivity.class);
+                intent.putExtra("title", items.get(position).getTitle());
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

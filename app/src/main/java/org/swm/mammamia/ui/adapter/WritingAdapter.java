@@ -66,6 +66,8 @@ public class WritingAdapter extends RecyclerView.Adapter<WritingAdapter.ViewHold
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), detailActivity.class);
                 intent.putExtra("title", items.get(position).getTitle());
+                intent.putExtra("content", items.get(position).getContent());
+                intent.putExtra("detail_pic", items.get(position).getDetail_pic());
                 view.getContext().startActivity(intent);
             }
         });

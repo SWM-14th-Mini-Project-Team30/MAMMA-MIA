@@ -31,10 +31,7 @@ MomMamia는 이러한 육아 문제를 사소한 부분부터 소통을 통해 �
 
 | Splash + 홈 | 상세 조회 |                         추천 콘텐츠                          |                           환경설정                           |
 | :---------: | :-------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|  <img src="https://user-images.githubusercontent.com/59546818/235036170-89d23def-b46a-4352-80c5-e8450eac7971.gif" width="300"/>    |  <img src="https://user-images.githubusercontent.com/59546818/235036487-e7c065c6-bac7-4d9e-aac7-65c78148161d.gif" width="300"/>         | <img src="https://user-images.githubusercontent.com/59546818/234962124-9c035658-b6d2-435a-9b65-efa8873ad7f2.gif" width ="300"/> | <img src="https://user-images.githubusercontent.com/59546818/234963263-c8055ce9-555b-43f6-a2e7-0cbaf4907665.png" width="300"/> |
-
-
-
+|  <img src="https://user-images.githubusercontent.com/59546818/235036170-89d23def-b46a-4352-80c5-e8450eac7971.gif" width="300"/>    |  <img src="https://user-images.githubusercontent.com/59546818/235037322-0609700b-0788-43e0-8866-22c413183bd3.gif" width="300"/>         | <img src="https://user-images.githubusercontent.com/59546818/234962124-9c035658-b6d2-435a-9b65-efa8873ad7f2.gif" width ="300"/> | <img src="https://user-images.githubusercontent.com/59546818/234963263-c8055ce9-555b-43f6-a2e7-0cbaf4907665.png" width="300"/> |
 
 <br/><br/>
 

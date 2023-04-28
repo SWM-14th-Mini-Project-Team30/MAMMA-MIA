@@ -49,10 +49,13 @@ public class HomeFragment extends Fragment {
         // meetingRv
         meetingRv.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         List<String> meetings = new ArrayList<>();
-        meetings.add("모임");
-        meetings.add("키즈카페\n후기 공유방");
-        meetings.add("유아식 레시피\n공유 모임");
-        meetings.add("소마 유모차\n레이싱 카페");
+        meetings.add("신생아 돌보기 질문방");
+        meetings.add("이유식/유아식 질문방");
+        meetings.add("초음파 질문방");
+        meetings.add("산후조리 공구 모임");
+        meetings.add("다둥이맘 수다방");
+        meetings.add("나홀로육아맘 수다방");
+        meetings.add("다문화가정맘 수다방");
         MeetingAdapter meetingAdapter = new MeetingAdapter(meetings);
         meetingRv.setAdapter(meetingAdapter);
 

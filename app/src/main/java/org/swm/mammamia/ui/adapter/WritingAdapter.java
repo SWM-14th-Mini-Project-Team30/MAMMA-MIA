@@ -56,7 +56,7 @@ public class WritingAdapter extends RecyclerView.Adapter<WritingAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.writingIv.setImageResource(R.drawable.ic_basic_image);
+        holder.writingIv.setImageResource(items.get(position).getDetail_pic());
         holder.titleTv.setText(items.get(position).getTitle());
         holder.categoryTv.setText(items.get(position).getCategory());
         holder.sakeTv.setText(items.get(position).getSake());

@@ -56,21 +56,26 @@ public class WritingAdapter extends RecyclerView.Adapter<WritingAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
         holder.writingIv.setImageResource(items.get(position).getDetail_pic());
         holder.titleTv.setText(items.get(position).getTitle());
         holder.categoryTv.setText(items.get(position).getCategory());
         holder.sakeTv.setText(items.get(position).getSake());
 
+        WritingItem item = items.get(position);
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(view.getContext(), detailActivity.class);
-                intent.putExtra("title", items.get(position).getTitle());
-                intent.putExtra("content", items.get(position).getContent());
-                intent.putExtra("detail_pic", items.get(position).getDetail_pic());
+                intent.putExtra("title", item.getTitle());
+                intent.putExtra("content", item.getContent());
+                intent.putExtra("detail_pic", item.getDetail_pic());
                 view.getContext().startActivity(intent);
             }
         });
+
     }
 
     @Override

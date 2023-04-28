@@ -2,6 +2,7 @@ package org.swm.mammamia.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -11,14 +12,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.swm.mammamia.R;
+import org.swm.mammamia.ui.home.MeetingItem;
 
 import java.util.List;
 
 public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.ViewHolder> {
 
-    private List<String> items;
+    private List<MeetingItem> items;
 
-    public MeetingAdapter(List<String> items) {
+    public MeetingAdapter(List<MeetingItem> items) {
         this.items = items;
     }
 
@@ -47,8 +49,9 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.meetingIv.setImageResource(R.drawable.ic_basic_image);
-        holder.meetingTv.setText(items.get(position));
+
+        holder.meetingIv.setImageResource(items.get(position).getPic());
+        holder.meetingTv.setText(items.get(position).getName());
     }
 
     @Override

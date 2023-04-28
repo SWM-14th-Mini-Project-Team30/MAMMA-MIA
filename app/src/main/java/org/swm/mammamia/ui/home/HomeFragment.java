@@ -48,14 +48,14 @@ public class HomeFragment extends Fragment {
 
         // meetingRv
         meetingRv.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-        List<String> meetings = new ArrayList<>();
-        meetings.add("신생아 돌보기 질문방");
-        meetings.add("이유식/유아식 질문방");
-        meetings.add("초음파 질문방");
-        meetings.add("산후조리 공구 모임");
-        meetings.add("다둥이맘 수다방");
-        meetings.add("나홀로육아맘 수다방");
-        meetings.add("다문화가정맘 수다방");
+        List<MeetingItem> meetings = new ArrayList<>();
+        meetings.add(new MeetingItem(R.drawable.meet_image1, "신생아 돌보기\n질문방"));
+        meetings.add(new MeetingItem(R.drawable.meet_image2, "이유식/유아식\n질문방"));
+        meetings.add(new MeetingItem(R.drawable.meet_image3, "초음파 질문방"));
+        meetings.add(new MeetingItem(R.drawable.meet_image4, "산후조리\n공구 모임"));
+        meetings.add(new MeetingItem(R.drawable.meet_image5, "다둥이맘 수다방"));
+        meetings.add(new MeetingItem(R.drawable.meet_image6, "나홀로육아맘\n수다방"));
+        meetings.add(new MeetingItem(R.drawable.meet_image7, "다문화가정맘\n수다방"));
         MeetingAdapter meetingAdapter = new MeetingAdapter(meetings);
         meetingRv.setAdapter(meetingAdapter);
 
